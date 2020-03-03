@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<poolman>
+
+  <management-mode>local</management-mode>
+
+  <!-- ========================================================== -->
+  <!-- These entries are simple examples of minimal JDBC          -->
+  <!-- Connection pools. Many of the parameters are optional, and -->
+  <!-- there are *many* more parameters available. Consult the    -->
+  <!-- UsersGuide.html document and the poolman.xml.template file -->
+  <!-- for guidance and element definitions.                      -->
+  <!-- ========================================================== -->	
+
+
+  <datasource>
+
+    <dbname>control</dbname>
+    <jndiName>jndi-control</jndiName>
+
+
+    <driver>com.mysql.jdbc.Driver</driver>
+    <url>jdbc:mysql://localhost/sp</url>
+    <username>root</username>
+    <password>12345678</password>
+
+
+
+    <txIsolationLevel>READ_COMMITTED</txIsolationLevel>
+
+    <nativeResults>true</nativeResults>
+
+    <poolPreparedStatements>false</poolPreparedStatements>
+
+    <initialConnections>10</initialConnections>
+    <minimumSize>0</minimumSize>
+    <maximumSize>30</maximumSize>
+    <maximumSoft>true</maximumSoft>
+
+    <connectionTimeout>600</connectionTimeout>
+    <userTimeout>30</userTimeout>
+    <shrinkBy>5</shrinkBy>
+
+    <!-- validationQuery>SELECT id FROM users</validationQuery -->
+
+    <logFile>c:\turismo.log</logFile>
+    <debugging>false</debugging>
+
+    <cacheEnabled>false</cacheEnabled>
+    <cacheSize>10</cacheSize>
+    <cacheRefreshInterval>120</cacheRefreshInterval>
+
+  </datasource>
+</poolman>
+
+
+
+
